@@ -809,6 +809,11 @@ class EntitlementOwnerType(Enum):
     user = 2
 
 
+class MessageReferenceType(Enum):
+    reply = 0
+    forward = 1
+
+
 def create_unknown_value(cls: Type[E], val: Any) -> E:
     value_cls = cls._enum_value_cls_  # type: ignore # This is narrowed below
     name = f'unknown_{val}'
